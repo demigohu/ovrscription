@@ -5,7 +5,7 @@ import contractJSON from "../contracts/InscriptionContract.json" // Mengimpor JS
 function Homey() {
   const [p, setP] = useState("ovr-20")
   const [op, setOp] = useState("mint")
-  const [tick, setTick] = useState("ovr")
+  const [tick, setTick] = useState("ovrs")
   const [amt, setAmt] = useState("1000")
   const [balance, setBalance] = useState(0) // State untuk menampung balance Inscription
 
@@ -15,7 +15,7 @@ function Homey() {
         if (window.ethereum) {
           const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-          const contractAddress = "0x68Dd9583fd56deB6778c4143f5E4bc2539b86edC" // Address of deployed smart contract
+          const contractAddress = "0xf5059a5D33d5853360D16C683c16e67980206f36" // Address of deployed smart contract
           const contract = new ethers.Contract(
             contractAddress,
             contractJSON.abi,
@@ -45,7 +45,7 @@ function Homey() {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
 
-        const contractAddress = "0x68Dd9583fd56deB6778c4143f5E4bc2539b86edC" // Address of deployed smart contract
+        const contractAddress = "0xf5059a5D33d5853360D16C683c16e67980206f36" // Address of deployed smart contract
         const contract = new ethers.Contract(
           contractAddress,
           contractJSON.abi,
@@ -98,7 +98,7 @@ function Homey() {
                 </div>
                 <div className="flex">
                   <p>Tick: {tick}</p>
-                  <p className="text-end">Total Supply: 100000</p>
+                  <p className="text-end">Total Supply: 10000000000</p>
                 </div>
               </div>
             </div>

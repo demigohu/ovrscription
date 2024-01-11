@@ -73,6 +73,7 @@ const Faucet = () => {
         >
           Request 10 Ether
         </button>
+        <p className="font-bold text-red-600 text-center">The faucet is slow, be patience don't spam click</p>
       </div>
     </div>
   )

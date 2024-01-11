@@ -11,7 +11,7 @@ const contractInteraction = {
     this.provider = new ethers.providers.JsonRpcProvider('https://froopyland.dymension.xyz/26/overgear_1229724-1/evmrpc'); // Ganti dengan alamat node Ethereum yang sesuai
 
     // Mendapatkan ABI dan address dari smart contract
-    const contractAddress = '0x68Dd9583fd56deB6778c4143f5E4bc2539b86edC'; // Address of deployed smart contract
+    const contractAddress = '0xf5059a5D33d5853360D16C683c16e67980206f36'; // Address of deployed smart contract
     this.contract = new ethers.Contract(contractAddress, InscriptionContract.abi, this.provider);
   },
 
