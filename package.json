@@ -16,6 +16,8 @@
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "sweetalert2": "^11.10.2",
     "web3": "^4.3.0"
   },
   "devDependencies": {

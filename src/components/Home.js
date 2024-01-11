@@ -114,7 +114,7 @@ function Homey() {
                 type="text"
                 placeholder="OVRS"
                 disabled
-                className="input input-bordered w-full"
+                className="input input-bordered w-full bg-white"
               />
               <button
                 onClick={handleMint}

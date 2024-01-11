@@ -1,0 +1,43 @@
+import React from "react"
+import Link from "next/link"
+import { FaGithub } from "react-icons/fa"
+import { FaSquareXTwitter } from "react-icons/fa6"
+import { FaDiscord } from "react-icons/fa"
+import { CgWebsite } from "react-icons/cg"
+
+const Sosmed = () => {
+  return (
+    <div className="d-flex flex-col absolute right-10 top-[40%] z-50 transition ">
+      <Link
+        href={"https://github.com/demigohu"}
+        target="_blank"
+        className="w-10 h-10 rounded-full overflow-hidden border shadow-md flex justify-center items-center p-2 cursor-pointer mb-5 hover:bg-white hover:scale-110 transition"
+      >
+        <FaGithub className="w-full h-full" />
+      </Link>
+      <Link
+        href={"https://twitter.com/tgraji_k"}
+        target="_blank"
+        className="w-10 h-10 rounded-full overflow-hidden border shadow-md flex justify-center items-center p-2 cursor-pointer mb-5 hover:bg-white hover:scale-110 transition"
+      >
+        <FaSquareXTwitter className="w-full h-full" />
+      </Link>
+      <Link
+        href={"https://discordapp.com/users/518467136788758539"}
+        target="_blank"
+        className="w-10 h-10 rounded-full overflow-hidden border shadow-md flex justify-center items-center p-2 cursor-pointer mb-5 hover:bg-white hover:scale-110 transition"
+      >
+        <FaDiscord className="w-full h-full" />
+      </Link>
+      <Link
+        href={"https://dgops.xyz/"}
+        target="_blank"
+        className="w-10 h-10 rounded-full overflow-hidden border shadow-md flex justify-center items-center p-2 cursor-pointer mb-5 hover:bg-white hover:scale-110 transition"
+      >
+        <CgWebsite className="w-full h-full" />
+      </Link>
+    </div>
+  )
+}
+
+export default Sosmed

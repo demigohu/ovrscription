@@ -50,7 +50,7 @@ function MintInscription() {
             <input
               type="text"
               placeholder="Type Here"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-white"
               id="pInput"
               value={p}
               onChange={(e) => setP(e.target.value)}
@@ -62,7 +62,7 @@ function MintInscription() {
             <input
               type="text"
               placeholder="Type Here"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-white"
               id="opInput"
               value={op}
               onChange={(e) => setOp(e.target.value)}
@@ -74,7 +74,7 @@ function MintInscription() {
             <input
               type="text"
               placeholder="Type Here"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-white"
               id="tickInput"
               value={tick}
               onChange={(e) => setTick(e.target.value)}
@@ -85,7 +85,7 @@ function MintInscription() {
             <label>Amt :</label>
             <input
               placeholder="Type Here"
-              className="input input-bordered w-full"
+              className="input input-bordered w-full bg-white"
               id="amtInput"
               type="number"
               value={amt}

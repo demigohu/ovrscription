@@ -5,3 +5,13 @@
 body {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
+
+.swal-custom-popup {
+  background: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+.swal2-success-fix,
+.swal2-success-circular-line-left,
+.swal2-success-circular-line-right {
+  background: transparent;
+}
