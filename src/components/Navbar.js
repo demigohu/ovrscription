@@ -62,6 +62,7 @@ function Navbar() {
           <Link href={"/"}>Home</Link>
           <Link href={"deploy"}>Deploy</Link>
           <Link href={"mint"}>Mint</Link>
+          <Link href={"faucet"}>Faucet</Link>
           <Link
             href={"https://portal.dymension.xyz/rollapp/overgear_1229724-1"}
           >

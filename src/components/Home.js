@@ -76,12 +76,12 @@ function Homey() {
         <div className="card border shadow-md mb-10">
           <div className="card-body">
             <div className="flex items-center justify-between">
-              <h1 className="font-bold">Minted {balance}/0</h1>
-              <p className="text-end font-bold">100%</p>
+              <h1 className="font-bold">Available Mint {balance}</h1>
+              <p className="text-end font-bold"></p>
             </div>
             <progress
               className="progress progress-success w-full h-3"
-              value="100"
+              value={balance}
               max="100"
             ></progress>
           </div>
@@ -108,7 +108,7 @@ function Homey() {
               <h2 className="card-title mb-5">Mint!</h2>
               <div className="flex items-center justify-between">
                 <p>Tick: {tick}</p>
-                <p className="text-end">Limit Per Mint: 5000</p>
+                <p className="text-end">Limit Per Mint: 1000</p>
               </div>
               <input
                 type="text"
