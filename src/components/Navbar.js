@@ -18,22 +18,24 @@ function Navbar() {
   const connectWallet = async () => {
     try {
       if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-  
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
+        const signer = provider.getSigner()
+
         // Cek apakah pengguna sudah terhubung ke wallet
-        const accounts = await window.ethereum.request({ method: "eth_accounts" });
+        const accounts = await window.ethereum.request({
+          method: "eth_accounts",
+        })
         if (accounts.length === 0) {
           // Jika belum terhubung, minta izin
-          await window.ethereum.request({ method: "eth_requestAccounts" });
+          await window.ethereum.request({ method: "eth_requestAccounts" })
         }
-  
+
         // Dapatkan alamat dan ChainID
-        const address = await signer.getAddress();
-        const chainId = await provider.getNetwork().chainId;
-  
+        const address = await signer.getAddress()
+        const chainId = await provider.getNetwork().chainId
+
         // Cek apakah ChainID sesuai dengan yang diinginkan (0x1229724)
-        if (chainId !== 0x12C39C) {
+        if (chainId !== 0x12c39c) {
           // Tambahkan jaringan yang diinginkan
           await window.ethereum.request({
             method: "wallet_addEthereumChain",
@@ -51,23 +53,22 @@ function Navbar() {
                 chainName: "overgear_1229724-1",
               },
             ],
-          });
+          })
         }
-  
+
         // Update informasi wallet jika diperlukan
-        setWalletAddress(address);
-        const balance = await provider.getBalance(address);
-        const formattedBalance = ethers.utils.formatEther(balance);
-        setBalance(formattedBalance);
-        setWalletInfoVisible(true);
+        setWalletAddress(address)
+        const balance = await provider.getBalance(address)
+        const formattedBalance = ethers.utils.formatEther(balance)
+        setBalance(formattedBalance)
+        setWalletInfoVisible(true)
       } else {
-        console.error("Metamask not found");
+        console.error("Metamask not found")
       }
     } catch (error) {
-      console.error("Error connecting to wallet:", error);
+      console.error("Error connecting to wallet:", error)
     }
-  };
-  
+  }
 
   const disconnectWallet = () => {
     setWalletInfoVisible(false)
@@ -100,7 +101,8 @@ function Navbar() {
           <Link href={"mint"}>Mint</Link>
           <Link href={"faucet"}>Faucet</Link>
           <Link
-            href={"https://portal.dymension.xyz/rollapp/overgear_1229724-1"} target="_blank"
+            href={"https://portal.dymension.xyz/rollapp/overgear_1229724-1"}
+            target="_blank"
           >
             RollApp
           </Link>
@@ -146,10 +148,18 @@ function Navbar() {
           <Hamburger toggled={isOpen} toggle={setOpen} />
           {isOpen ? (
             <div className="flex flex-col items-center gap-10 font-semibold absolute right-0 bg-yellow-500 w-full z-50 py-10 top-full transition-all">
-              <Link href={"/"}>Home</Link>
-              <Link href={"deploy"}>Deploy</Link>
-              <Link href={"mint"}>Mint</Link>
-              <Link href={"faucet"}>Faucet</Link>
+              <Link href={"/"} onClick={() => setOpen(false)}>
+                Home
+              </Link>
+              <Link href={"deploy"} onClick={() => setOpen(false)}>
+                Deploy
+              </Link>
+              <Link href={"mint"} onClick={() => setOpen(false)}>
+                Mint
+              </Link>
+              <Link href={"faucet"} onClick={() => setOpen(false)}>
+                Faucet
+              </Link>
               <Link
                 href={"https://portal.dymension.xyz/rollapp/overgear_1229724-1"}
               >

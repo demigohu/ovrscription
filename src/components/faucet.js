@@ -73,7 +73,9 @@ const Faucet = () => {
         >
           Request 10 OVR
         </button>
-        <p className="font-bold text-red-600 text-center">The faucet is slow, be patience don't spam click</p>
+        <p className="font-bold text-red-600 text-center">
+          The faucet is slow, be patience dont spam click
+        </p>
       </div>
     </div>
   )

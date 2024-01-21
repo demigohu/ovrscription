@@ -6,6 +6,10 @@ body {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
 
+input {
+  background-color: white !important;
+}
+
 .swal-custom-popup {
   background: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
