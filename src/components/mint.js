@@ -43,7 +43,7 @@ function MintInscription() {
 
   return (
     <div className="card border shadow-md w-[90%] md:w-[80%] lg:w-1/2 mt-10 mx-auto">
-      <div className="card-body flex-grow-0 p-5 md:p-10">
+      <div className="card-body flex-grow-0 p-5 md:p-10 text-black">
         <h2 className="card-title mb-5 font-bold">Mint Inscription</h2>
         <form className="flex flex-col gap-3">
           <div>

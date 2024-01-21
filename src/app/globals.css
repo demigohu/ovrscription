@@ -8,6 +8,8 @@ body {
 
 input {
   background-color: white !important;
+  border: none !important;
+  color: black !important;
 }
 
 .swal-custom-popup {

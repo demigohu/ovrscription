@@ -7,7 +7,7 @@ import { CgWebsite } from "react-icons/cg"
 
 const Sosmed = () => {
   return (
-    <div className="flex gap-5 absolute -bottom-8 items-end right-5 md:right-20 z-40 transition md:bottom-[10%] lg:flex-col lg:bottom-[25%]">
+    <div className="flex gap-5 absolute -bottom-12 items-end right-5 md:right-20 z-40 transition md:bottom-[10%] lg:flex-col lg:bottom-[25%]">
       <Link
         href={"https://github.com/demigohu"}
         target="_blank"

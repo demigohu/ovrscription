@@ -8,15 +8,14 @@ function Deploy() {
   const [tick, setTick] = useState("")
   const [amt, setAmt] = useState("")
 
-  const handleDeploy = async (e) => {
-    e.preventDefault()
+  const handleDeploy = async () => {
     try {
       if (window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" })
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
 
-        const contractAddress = "0xf5059a5D33d5853360D16C683c16e67980206f36" // Address of deployed smart contract
+        const contractAddress = "0x68Dd9583fd56deB6778c4143f5E4bc2539b86edC" // Address of deployed smart contract
         const contract = new ethers.Contract(
           contractAddress,
           contractJSON.abi,
@@ -42,8 +41,8 @@ function Deploy() {
   }
 
   return (
-    <div className="card border shadow-md w-[90%] md:w-[80%] lg:w-1/2 mt-10 mx-auto">
-      <div className="card-body flex-grow-0 p-5 md:p-10">
+    <div className="card border shadow-md w-[90%] md:w-[80%] lg:w-1/2 mt-10 mx-auto ">
+      <div className="card-body flex-grow-0 p-5 md:p-10 text-black">
         <h2 className="card-title mb-5 font-bold">Deploy Inscription</h2>
         <form className="flex flex-col gap-3">
           <div>
