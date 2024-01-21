@@ -43,7 +43,9 @@ function Deploy() {
   return (
     <div className="card border shadow-md w-[90%] md:w-[80%] lg:w-1/2 mt-10 mx-auto ">
       <div className="card-body flex-grow-0 p-5 md:p-10 text-black">
-        <h2 className="card-title mb-5 font-bold">Deploy Inscription</h2>
+        <h2 className="card-title mb-5 font-bold  text-black">
+          Deploy Inscription
+        </h2>
         <form className="flex flex-col gap-3">
           <div>
             <label className="">P</label>
