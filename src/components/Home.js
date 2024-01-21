@@ -72,9 +72,9 @@ function Homey() {
 
   return (
     <>
-      <div className="w-[80%] mt-10 mx-auto text-white">
+      <div className="w-[90%] md:w-[80%] mt-10 mx-auto text-white">
         <div className="card border shadow-md mb-10">
-          <div className="card-body">
+          <div className="card-body p-5 md:p-10">
             <div className="flex items-center justify-between">
               <h1 className="font-bold">Available Mint {balance}</h1>
               <p className="text-end font-bold"></p>
@@ -87,9 +87,9 @@ function Homey() {
           </div>
         </div>
 
-        <div className="flex gap-5">
+        <div className="flex gap-5 flex-col lg:flex-row">
           <div className="card border shadow-md flex-1">
-            <div className="card-body">
+            <div className="card-body p-5 md:p-10">
               <h2 className="card-title mb-5">Overview!</h2>
               <div className="flex flex-col justify-around h-full">
                 <div className="flex">
@@ -104,7 +104,7 @@ function Homey() {
             </div>
           </div>
           <div className="card border shadow-md flex-1">
-            <div className="card-body flex-grow-0">
+            <div className="card-body flex-grow-0 p-5 md:p-10">
               <h2 className="card-title mb-5">Mint!</h2>
               <div className="flex items-center justify-between">
                 <p>Tick: {tick}</p>
