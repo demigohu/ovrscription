@@ -71,8 +71,9 @@ const Faucet = () => {
           onClick={requestFaucet}
           className="btn btn-neutral text-white mt-5"
         >
-          Request 10 Ether
+          Request 10 OVR
         </button>
+        <p className="font-bold text-red-600 text-center">The faucet is slow, be patience don't spam click</p>
       </div>
     </div>
   )

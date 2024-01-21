@@ -8,14 +8,15 @@ function Deploy() {
   const [tick, setTick] = useState("")
   const [amt, setAmt] = useState("")
 
-  const handleDeploy = async () => {
+  const handleDeploy = async (e) => {
+    e.preventDefault()
     try {
       if (window.ethereum) {
         await window.ethereum.request({ method: "eth_requestAccounts" })
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
 
-        const contractAddress = "0x68Dd9583fd56deB6778c4143f5E4bc2539b86edC" // Address of deployed smart contract
+        const contractAddress = "0xf5059a5D33d5853360D16C683c16e67980206f36" // Address of deployed smart contract
         const contract = new ethers.Contract(
           contractAddress,
           contractJSON.abi,
